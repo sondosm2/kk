@@ -1,3 +1,4 @@
+Python==3.10.11
 langchain==0.0.161
 huggingface-hub==0.14.1
 pandas==1.5.3
