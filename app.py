@@ -1,7 +1,8 @@
+import numpy as np
+import streamlit as st
 from langchain import PromptTemplate, HuggingFaceHub, LLMChain
 from langchain.llms import HuggingFacePipeline
 import torch
-import numpy as np
 from langchain.document_loaders import UnstructuredPDFLoader
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.text_splitter import CharacterTextSplitter
@@ -14,10 +15,8 @@ from pathlib import Path
 from langchain.vectorstores import Chroma
 from pathlib import Path
 from langchain.chains import RetrievalQA
-import re
 from langchain.document_loaders import PDFMinerLoader
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM,pipeline
-import streamlit as st
 
 def preprocess(file_path,question):
   pdf_folder_path = file_path
